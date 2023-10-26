@@ -23,7 +23,7 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: 3px 4px 15px -3px #000000;
-  transition: transform 0.8s;
+  transition: transform 0.8s, box-shadow 0.8s;
 }
 
 @keyframes shadow {
@@ -39,7 +39,8 @@ body {
   transform: rotate(0);
   transform: scale(1.2);
   z-index: 1;
-  animation: shadow 0.8s forwards;
+  /*animation: shadow 0.8s forwards;*/
+  box-shadow: 3px 4px 25px 3px #000000;
 }
 
 .post-it h1 {
