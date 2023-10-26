@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #666666;
+}
+
+.board {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  row-gap: 30px;
+}
+
+.post-it {
+  width: 280px;
+  height: 200px;
+  font-family: "Indie Flower", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 4px 15px -3px #000000;
+  transition: transform 0.8s;
+}
+
+@keyframes shadow {
+  from {
+    box-shadow: 3px 4px 15px -3px #000000;
+  }
+  to {
+    box-shadow: 3px 4px 25px 3px #000000;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.post-it:hover {
+  transform: rotate(0);
+  transform: scale(1.2);
+  z-index: 1;
+  animation: shadow 0.8s forwards;
+}
+
+.post-it h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.post-it p {
+  font-size: 1.8rem;
+}
+
+.first,
+.fifth,
+.seventh {
+  background-image: linear-gradient(#fcfcca, #bebea4);
+}
+
+.second,
+.fourth,
+.eighth {
+  background-image: linear-gradient(#cafccb, #9eb6a0);
+}
+
+.third,
+.sixth {
+  background-image: linear-gradient(#c8c9f9, #8a8c9b);
+}
+
+.first {
+  transform: rotate(-5deg);
+  animation: fade-in 1s 3s backwards;
+  animation-iteration-count: 1;
+}
+
+.second {
+  transform: rotate(4deg);
+  animation: fade-in 1s 1s backwards;
+  animation-iteration-count: 1;
+}
+
+.third {
+  transform: rotate(-4deg);
+  animation: fade-in 1s 2s backwards;
+  animation-iteration-count: 1;
+}
+
+.fourth {
+  transform: rotate(8deg);
+  animation: fade-in 1s 1.5s backwards;
+  animation-iteration-count: 1;
+}
+
+.fifth {
+  transform: rotate(-3deg);
+  animation: fade-in 1s 2.5s backwards;
+  animation-iteration-count: 1;
+}
+
+.sixth {
+  transform: rotate(-4deg);
+  animation: fade-in 1s 3.5s backwards;
+  animation-iteration-count: 1;
+}
+
+.seventh {
+  transform: rotate(-3deg);
+  animation: fade-in 1s 4s backwards;
+  animation-iteration-count: 1;
+}
+
+.eighth {
+  transform: rotate(4deg);
+  animation: fade-in 1s 4.5s backwards;
+  animation-iteration-count: 1;
+}
